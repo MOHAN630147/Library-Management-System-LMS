@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #64748b;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --radius: 0.75rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--background);
+  color: var(--text-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+/* Minimalist Card */
+.glass-card,
+.card {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.glass-card:hover,
+.card:hover {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Navbar Style Refined */
+.navbar-custom {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 0.8rem 0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.navbar-custom .navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+.navbar-custom .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem !important;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-custom .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.welcome-section {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 1.5rem;
+  margin-left: 1rem;
+}
+
+.role-badge {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  font-size: 0.65rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.8rem !important;
+}
+
+/* Buttons */
+.btn-primary-custom {
+  background: var(--primary) !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.6rem 1.5rem !important;
+  border-radius: var(--radius) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-primary-custom:hover {
+  background: var(--primary-dark) !important;
+  transform: translateY(-1px);
+}
+
+.btn-outline-custom {
+  background: transparent !important;
+  color: var(--primary) !important;
+  border: 1.5px solid var(--primary) !important;
+  padding: 0.6rem 1.5rem !important;
+  border-radius: var(--radius) !important;
+  font-weight: 600 !important;
+}
+
+/* Table Style */
+.table {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.table thead th {
+  border: none;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  padding: 1rem;
+}
+
+.table tbody tr {
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius);
+}
+
+.table tbody td {
+  padding: 1.25rem 1rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody td:first-child {
+  border-left: 1px solid var(--border);
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+}
+
+.table tbody td:last-child {
+  border-right: 1px solid var(--border);
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+/* App Content Wrapper (Global Background) */
+.app-content-wrapper {
+  min-height: calc(100vh - 72px);
+  /* Navbar adjustment */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('./assets/large_SmartHomesLibrary_Lead.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Updated Glassmorphism */
+.glass-card,
+.card {
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-radius: var(--radius) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+
+.auth-card {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.auth-card .text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.auth-card label {
+  color: white !important;
+}
+
+.auth-card .form-control,
+.auth-card .form-select {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.auth-card select option {
+  background-color: #1e293b !important;
+  color: white !important;
+}
+
+.auth-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.auth-card .border-top {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.glass-card:hover,
+.card:not(.auth-card):hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Global Typography for Background */
+.app-content-wrapper h1,
+.app-content-wrapper h2,
+.app-content-wrapper h3,
+.app-content-wrapper h4,
+.app-content-wrapper h5,
+.app-content-wrapper p:not(.text-muted),
+.app-content-wrapper label {
+  color: white !important;
+}
+
+.app-content-wrapper .text-muted {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Table Style Refinement for Dark BG */
+.table tbody tr {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: white !important;
+}
+
+.table tbody td {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.table thead th {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Hero Badge Styling */
+.hero-badge {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+/* Auth layout wrapper */
+.auth-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Redundant home-wrapper styles removed - now handled by app-content-wrapper */
